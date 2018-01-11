@@ -1,0 +1,76 @@
+import javax.security.auth.login.Configuration
+
+group 'com.tthy'
+version '1.0.0.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+sourceCompatibility = 1.8
+
+/**源码文件设置**/
+sourceSets {
+    src{
+        main {
+            java
+            resources
+            /**java {
+               // srcDir 'java'
+            }
+            resources {
+              //  srcDir 'resources'
+            }**/
+        }
+
+        test{
+            java
+            resources
+            /***
+            java {
+                srcDir 'java'
+            }
+            resources {
+                srcDir 'resources'
+            }**/
+        }
+    }
+
+}
+repositories {
+    maven{ url "http://maven.aliyun.com/nexus/content/groups/public/"}
+    mavenLocal()
+    jcenter()
+    maven { url "http://repo.maven.apache.org/maven2/"}
+    maven { url 'https://repo.spring.io/libs-milestone'}
+    mavenCentral()
+}
+
+/**依赖分组**/
+configurations{
+    tthy
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/io.netty/netty-all
+    compile group: 'io.netty', name: 'netty-all', version: '4.1.19.Final'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+    // https://mvnrepository.com/artifact/commons-logging/commons-logging
+    compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
+    // https://mvnrepository.com/artifact/dom4j/dom4j
+    compile group: 'dom4j', name: 'dom4j', version: '1.6.1'
+    // https://mvnrepository.com/artifact/org.javassist/javassist
+    compile group: 'org.javassist', name: 'javassist', version: '3.22.0-GA'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    // https://mvnrepository.com/artifact/org.slf4j/jcl-over-slf4j
+    compile group: 'org.slf4j', name: 'jcl-over-slf4j', version: '1.7.25'
+    // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
+    compile group: 'com.google.protobuf', name: 'protobuf-java', version: '2.4.1'
+    /***
+    compile project(':shared') 依赖另一个工程**/
+    /***
+    compile files('libs/a.jar', 'libs/b.jar')
+    compile fileTree(dir: 'libs', include: '*.jar')**依赖另一个文件*/
+    compile fileTree(dir: 'libs', include: '*.jar')
+}
