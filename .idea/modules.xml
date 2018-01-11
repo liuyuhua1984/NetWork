@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/NetWork.iml" filepath="$PROJECT_DIR$/.idea/modules/NetWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NettyWork/NetWork-NetWork.iml" filepath="$PROJECT_DIR$/.idea/modules/NettyWork/NetWork-NetWork.iml" group="NetWork" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NettyWork/NetWork-NetWork_main.iml" filepath="$PROJECT_DIR$/.idea/modules/NettyWork/NetWork-NetWork_main.iml" group="NetWork" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NettyWork/NetWork-NetWork_test.iml" filepath="$PROJECT_DIR$/.idea/modules/NettyWork/NetWork-NetWork_test.iml" group="NetWork" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WorkIDEA-NetWork.iml" filepath="$PROJECT_DIR$/.idea/modules/WorkIDEA-NetWork.iml" />
     </modules>
   </component>
 </project>
